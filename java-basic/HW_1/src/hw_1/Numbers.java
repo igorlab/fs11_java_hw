@@ -8,6 +8,7 @@ public class Numbers {
 
         System.out.println("Hi! Type your name: ");
         String user_name = helpers.Strings.readString();
+
         System.out.printf("%s, Let the game begin! \n", user_name);
 
         while (true){
@@ -18,11 +19,9 @@ public class Numbers {
             }
             else if (number > random) {
                 System.out.println("Your number is too big. Please, try again.");
-                break;
             }
             else if (number < random) {
                 System.out.println("Your number is too small. Please, try again.");
-                break;
             }
         }
 
