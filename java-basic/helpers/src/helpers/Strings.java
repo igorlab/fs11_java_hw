@@ -1,7 +1,6 @@
 package helpers;
 
 import java.util.Scanner;
-
 import static helpers.Numbers.isInteger;
 
 public class Strings {
