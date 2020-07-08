@@ -4,12 +4,13 @@ import static helpers.Numbers.*;
 import static helpers.Strings.*;
 
 public class NumbersHW {
+
     public static void main(String[] args) {
 
         int random = getRandomInt(0, 5);
         System.out.printf("Your secret number: %s \n", random);
 
-        System.out.println("Hi! Type your name: ");
+        System.out.print("Hi! Type your name: ");
         String user_name = readString();
 
         System.out.printf("%s, Let the game begin! \n", user_name);
