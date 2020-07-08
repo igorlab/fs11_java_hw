@@ -1,7 +1,5 @@
 package hw_1;
 
-import helpers.Strings;
-
 public class Numbers {
     public static void main(String[] args) {
 
@@ -14,7 +12,18 @@ public class Numbers {
 
         while (true){
             int number = helpers.Numbers.readIntNumbers();
-            System.out.printf("Your number: %s \n", number);
+            if (number == random) {
+                System.out.printf("Congratulations, %s! \n", user_name);
+                break;
+            }
+            else if (number > random) {
+                System.out.println("Your number is too big. Please, try again.");
+                break;
+            }
+            else if (number < random) {
+                System.out.println("Your number is too small. Please, try again.");
+                break;
+            }
         }
 
     }
