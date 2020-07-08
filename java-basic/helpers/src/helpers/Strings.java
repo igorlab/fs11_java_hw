@@ -12,7 +12,7 @@ public class Strings {
             if(value.length() > 0){
                 break;
             } else {
-                System.out.printf("%s is not number\n", value);
+                System.out.println("String should contains at last one character");
             }
         }
         in.close();
