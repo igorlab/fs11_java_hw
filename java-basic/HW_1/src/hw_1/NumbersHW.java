@@ -1,5 +1,8 @@
 package hw_1;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 import static helpers.Numbers.*;
 import static helpers.Strings.*;
 
@@ -7,24 +10,43 @@ public class NumbersHW {
 
     public static void main(String[] args) {
 
-        int random = getRandomInt(0, 5);
+        int random = getRandomInt(0, 100);
         System.out.printf("Your secret number: %s \n", random);
 
         System.out.print("Hi! Type your name: ");
-        String user_name = readString();
+        String userName = readString();
 
-        System.out.printf("%s, Let the game begin! \n", user_name);
+        System.out.printf("%s, Let the game begin! \n", userName);
 
-        while (true){
+        int[] yourNumbers = new int[100];
+        int i = 0;
+
+        while (i <= 100){
             int number = readIntNumbers();
+            yourNumbers[i] = number;
+            i++;
             if (number == random) {
-                System.out.printf("Congratulations, %s! \n", user_name);
+                System.out.printf("Congratulations, %s! \n", userName);
+                if (i>1) {
+                    int temp =0;
+                    for (int n = 0; n < i - 1; n++) {
+                        for (int j = 0; j < i - n - 1; j++) {
+                            if (yourNumbers[j] > yourNumbers[j + 1]) {
+                                // меняем элементы местами
+                                temp = yourNumbers[j];
+                                yourNumbers[j] = yourNumbers[j + 1];
+                                yourNumbers[j + 1] = temp;
+                            }
+                        }
+                    }
+                    System.out.println("your numbers: "+ Arrays.toString(Arrays.copyOf(yourNumbers, i)));
+                } else System.out.println("Your number is: " + number);
                 break;
             }
             else if (number > random) {
                 System.out.println("Your number is too big. Please, try again.");
             }
-            else if (number < random) {
+            else {
                 System.out.println("Your number is too small. Please, try again.");
             }
         }
