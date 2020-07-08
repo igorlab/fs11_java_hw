@@ -17,7 +17,7 @@ public class Numbers {
                 System.out.printf("%s is not number\n", num);
             }
         }
-        in.close();
+        //in.close();
         return Integer.parseInt(num);
     }
 
