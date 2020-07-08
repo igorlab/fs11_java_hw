@@ -31,7 +31,7 @@ public class NumbersHW {
                     int temp =0;
                     for (int n = 0; n < i - 1; n++) {
                         for (int j = 0; j < i - n - 1; j++) {
-                            if (yourNumbers[j] > yourNumbers[j + 1]) {
+                            if (yourNumbers[j] < yourNumbers[j + 1]) {
                                 // меняем элементы местами
                                 temp = yourNumbers[j];
                                 yourNumbers[j] = yourNumbers[j + 1];
