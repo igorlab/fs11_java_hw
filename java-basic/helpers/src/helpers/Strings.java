@@ -11,7 +11,7 @@ public class Strings {
             if(value.length() > 0){
                 break;
             } else {
-                System.out.println("String should contains at last one character");
+                System.out.println("The string should contain at least one character");
             }
         }
         in.close();

@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Numbers {
+
     public static int readIntNumbers(){
         Scanner in = new Scanner(System.in);
         System.out.print("Input a number: ");
@@ -23,9 +24,7 @@ public class Numbers {
     public static boolean isInteger(String s) {
         try {
             Integer.parseInt(s);
-        } catch(NumberFormatException e) {
-            return false;
-        } catch(NullPointerException e) {
+        } catch(NumberFormatException | NullPointerException e) {
             return false;
         }
         // only got here if we didn't return false
