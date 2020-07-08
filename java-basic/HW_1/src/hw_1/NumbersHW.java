@@ -1,10 +1,10 @@
 package hw_1;
 
-public class Numbers {
+public class NumbersHW {
     public static void main(String[] args) {
 
         int random = helpers.Numbers.getRandomInt(0, 5);
-        System.out.printf("Your number: %s \n", random);
+        System.out.printf("Your secret number: %s \n", random);
 
         System.out.println("Hi! Type your name: ");
         String user_name = helpers.Strings.readString();
