@@ -1,13 +1,15 @@
 package hw_1;
 
+import helpers.*;
+
 public class NumbersHW {
     public static void main(String[] args) {
 
-        int random = helpers.Numbers.getRandomInt(0, 5);
+        int random = Numbers.getRandomInt(0, 5);
         System.out.printf("Your secret number: %s \n", random);
 
         System.out.println("Hi! Type your name: ");
-        String user_name = helpers.Strings.readString();
+        String user_name = Strings.readString();
 
         System.out.printf("%s, Let the game begin! \n", user_name);
 
