@@ -2,7 +2,6 @@ package helpers;
 
 import java.util.Scanner;
 import static helpers.Numbers.isInteger;
-
 public class Strings {
     public static String readString() {
         Scanner in = new Scanner(System.in);
