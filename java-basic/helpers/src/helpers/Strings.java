@@ -14,7 +14,6 @@ public class Strings {
                 System.out.println("The string should contain at least one character");
             }
         }
-        //in.close();
         return value;
     }
 }

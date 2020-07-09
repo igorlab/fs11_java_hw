@@ -24,6 +24,8 @@ public class NumbersHW {
 
         while (true){ // Сам процесс игры обрабатывается в бесконечном цикле
             if (i > 99) break;
+
+            System.out.print("Input a number: ");
             int number = readIntNumbers();
             yourNumbers[i] = number;
             i++;
