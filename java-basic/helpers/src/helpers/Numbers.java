@@ -14,11 +14,27 @@ public class Numbers {
             if(isInteger(num)){
                 break;
             } else {
-                System.out.printf("%s is not number\n", num);
+                System.out.printf("%s is not number%n", num);
             }
         }
         //in.close();
         return Integer.parseInt(num);
+    }
+    public static int readIntNumbersRange(int min, int max){
+        int value;
+        Scanner in = new Scanner(System.in);
+        String num;
+        while(true){
+            num = in.nextLine();
+            if(isInteger(num) ){
+                value = Integer.parseInt(num);
+                if(value >= min && value <= max) break;
+                else System.out.printf(" number not in range [%s-%s], repeat pls ", min, max);
+            } else {
+                System.out.printf("%s is not number%n", num);
+            }
+        }
+        return value;
     }
 
     public static boolean isInteger(String s) {

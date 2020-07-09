@@ -2,6 +2,7 @@ package hw_1;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Collections;
 
 import static helpers.Numbers.*;
 import static helpers.Strings.*;
@@ -11,7 +12,7 @@ public class NumbersHW {
     public static void main(String[] args) {
 
         int random = getRandomInt(0, 100);
-        //System.out.printf("Your secret number: %s \n", random);
+        System.out.printf("Your secret number: %s \n", random);
 
         System.out.print("Hi! Type your name: ");
         String userName = readString();
