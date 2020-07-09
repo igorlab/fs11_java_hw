@@ -21,7 +21,7 @@ public class TaskPlanner {
 
             if(inputString.indexOf("change ") == 0){
                 String changeDay = inputString.replace("change ","");
-                System.out.println("Please, input new tasks for Monday");
+                System.out.println("Please, input new tasks for " + changeDay);
                 String newTask =  readString().trim();
                 for (int i = 0; i < schedule.length; i++) {
                     if(schedule[i][0].equals(changeDay)){
@@ -31,7 +31,6 @@ public class TaskPlanner {
                     }
                 }
             } else {
-
                 switch (inputString.toLowerCase()){
                     case "sunday": // не можем использовать schedule[0][0] потому что в case должна быть константа, можно это как-то обойти?
                         System.out.println(schedule[0][1]);
