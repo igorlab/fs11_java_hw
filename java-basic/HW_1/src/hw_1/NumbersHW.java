@@ -1,11 +1,10 @@
 package hw_1;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Collections;
 
-import static helpers.Numbers.*;
-import static helpers.Strings.*;
+import static helpers.Numbers.getRandomInt;
+import static helpers.Numbers.readIntNumbers;
+import static helpers.Strings.readString;
 
 public class NumbersHW {
 
