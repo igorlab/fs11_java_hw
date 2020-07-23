@@ -8,7 +8,12 @@ public class Human {
     private  Pet pet;
     private  Human mother;
     private  Human father;
-    private  String[][] schedule;
+    private  String[][] schedule = new String[0][0];
+    private  Family family;
+
+    public void setFamily(Family family) {
+        this.family = family;
+    }
 
     public String getName() {
         return name;
@@ -56,7 +61,9 @@ public class Human {
     }
 
     public void greetPet(){
-        System.out.printf("Привет, %s%n", pet.getNickname());
+        String greetPet;
+        greetPet = pet != null ? String.format("Привет, %s%n", pet.getNickname()) : "no pet";
+        System.out.println(greetPet);
     }
 
     public void describePet() {
@@ -66,8 +73,9 @@ public class Human {
 
     @Override
     public String toString() {
-        return String.format("Human{name='%s', surname='%s', year=%d, iq=%d, mother=%s %s, father=%s %s, pet=%s{nickname='%s', age=%d, trickLevel=%d, habits=%s}}",
-                this.name, this.surname, this.year, this.iq, mother.getName(), mother.getSurname(), father.getName(),
-                father.getSurname(), pet.getSpecies(), pet.getNickname(), pet.getAge(), pet.getTrickLevel(), Arrays.toString(pet.getHabits()));
+        return String.format("Human {name='%s', surname='%s', year=%d, iq=%d, schedule=%s}",
+                this.name, this.surname, this.year, this.iq,
+                Arrays.deepToString(this.schedule)
+        );
     }
 }
