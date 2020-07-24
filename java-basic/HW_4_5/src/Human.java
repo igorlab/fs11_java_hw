@@ -1,18 +1,18 @@
 import java.util.Arrays;
 
-public class Human0 {
+public class Human {
     private String name = "";
     private String surname = "";
     private int year = -1;
     private int iq = -1;
-    private Pet0 pet0;
-    private Human0 mother;
-    private Human0 father;
+    private Pet pet;
+    private Human mother;
+    private Human father;
     private String[][] schedule = new String[0][0];
-    private Family0 family0;
+    private Family family;
 
-    public void setFamily0(Family0 family0) {
-        this.family0 = family0;
+    public void setFamily(Family family) {
+        this.family = family;
     }
 
     public String getName() {
@@ -31,18 +31,18 @@ public class Human0 {
         return iq;
     }
 
-    public Human0(String name, String surname, int year, int iq, Pet0 pet0, Human0 mother, Human0 father, String[][] schedule) {
+    public Human(String name, String surname, int year, int iq, Pet pet, Human mother, Human father, String[][] schedule) {
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq = iq;
-        this.pet0 = pet0;
+        this.pet = pet;
         this.mother = mother;
         this.father = father;
         this.schedule = schedule;
     }
 
-    public Human0(String name, String surname, int year, Human0 mother, Human0 father) {
+    public Human(String name, String surname, int year, Human mother, Human father) {
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -50,7 +50,7 @@ public class Human0 {
         this.father = father;
     }
 
-    public Human0(String name, String surname, int year) {
+    public Human(String name, String surname, int year) {
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -58,15 +58,15 @@ public class Human0 {
 
     public void greetPet() {
         String greetPet = "";
-        if (family0 != null && family0.getPet0()) {
-            greetPet = String.format("Привет, %s%n", family0.getPet().getNickname());
+        if (family != null && family.isPet()) {
+            greetPet = String.format("Привет, %s%n", family.getPet().getNickname());
         } else greetPet = "no pet";
         System.out.println(greetPet);
     }
 
     public void describePet() {
         System.out.printf("У меня есть %s, ему %d лет, он %s%n",
-                pet0.getSpecies(), pet0.getAge(), pet0.getTrickLevel() > 50 ? "очень хитрый" : "почти не хитрый");
+                pet.getSpecies(), pet.getAge(), pet.getTrickLevel() > 50 ? "очень хитрый" : "почти не хитрый");
     }
 
 
