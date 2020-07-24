@@ -42,14 +42,20 @@ public class Pet {
         return habits;
     }
 
-    public void eat(){
+    public void eat() {
         System.out.println("Я кушаю!");
     }
-    public void respond(){
+    public void respond() {
         System.out.printf("Привет, хозяин. Я - %s. Я соскучился!%n", this.nickname);
     }
-    public void foul(){
+    public void foul() {
         System.out.println("Нужно хорошо замести следы...");
+    }
+
+
+    @Override
+    protected void finalize() {
+        System.out.println("delete " + this.toString());
     }
 
     @Override
