@@ -34,16 +34,11 @@ public class HappyFamily {
         Family family1 = new Family(mather, father);
         System.out.println(family1.toString());
 
-        Family family2 = new Family(mather, father, petOne);
-        //System.out.println(family2.toString());
-
         Family family3 = new Family(mather, father, new Human[] { children }, petOne);
         System.out.println(family3.toString());
 
         Family family4 = new Family(mather, father, new Human[] { children, children2 }, petOne);
         System.out.println(family4.toString());
-
-
 
     }
 }

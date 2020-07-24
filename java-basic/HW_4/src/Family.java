@@ -30,14 +30,6 @@ public class Family {
         father.setFamily(this);
         cnt++;
     }
-    public Family(Human mother, Human father, Pet pet) {
-        this.mother = mother;
-        this.father = father;
-        this.pet = pet;
-        mother.setFamily(this);
-        father.setFamily(this);
-        cnt++;
-    }
 
     public Human getMother() {
         return mother;
