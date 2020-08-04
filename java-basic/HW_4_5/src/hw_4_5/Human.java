@@ -1,3 +1,5 @@
+package hw_4_5;
+
 import java.util.Arrays;
 
 public class Human {
@@ -77,7 +79,7 @@ public class Human {
 
     @Override
     public String toString() {
-        return String.format("Human {name='%s', surname='%s', year=%d, iq=%d, schedule=%s}",
+        return String.format("hw_4_5.Human {name='%s', surname='%s', year=%d, iq=%d, schedule=%s}",
                 this.name, this.surname, this.year, this.iq,
                 Arrays.deepToString(this.schedule)
         );

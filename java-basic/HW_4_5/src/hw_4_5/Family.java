@@ -1,3 +1,5 @@
+package hw_4_5;
+
 public class Family {
     private final Human mother;
     private final Human father;
@@ -115,12 +117,12 @@ public class Family {
     @Override
     public String toString() {
         return  "--------------------------------------------------------------------------------------------\n" +
-                "Family["+cnt+"]{\n" +
+                "hw_4_5.Family["+cnt+"]{\n" +
                 father.toString() + '\n' +
                 mother.toString() + '\n' +
-                "Pet " + (pet != null ? pet.toString() : "no" )+ '\n' +
+                "hw_4_5.Pet " + (pet != null ? pet.toString() : "no" )+ '\n' +
                 ( children.length > 0 ? ("child: " + this.getChildrenS()) : "No child\n" ) +
-                "Family consist of " + countFamily() + " humans\n" +
+                "hw_4_5.Family consist of " + countFamily() + " humans\n" +
                 "}\n--------------------------------------------------------------------------------------------\n";
     }
 

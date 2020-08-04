@@ -1,3 +1,5 @@
+package hw_4_5;
+
 public class HappyFamily {
     public static void main(String[] args) {
 

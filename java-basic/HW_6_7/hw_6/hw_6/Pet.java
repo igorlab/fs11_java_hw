@@ -1,13 +1,16 @@
+package hw_6;
+
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Pet {
-    private  String species = "";
+    private  Species species;
     private  String nickname = "";
     private  int age;
     private  int trickLevel;
     private  String[] habits;
 
-    public Pet(String species, String nickname, int age, int trickLevel, String[] habits) {
+    public Pet(Species species, String nickname, int age, int trickLevel, String[] habits) {
         this.species = species;
         this.nickname = nickname;
         this.age = age;
@@ -15,7 +18,7 @@ public class Pet {
         this.habits = habits;
     }
 
-    public Pet(String species, String nickname) {
+    public Pet(Species species, String nickname) {
         this.species = species;
         this.nickname = nickname;
     }
@@ -23,7 +26,7 @@ public class Pet {
     public Pet() {
     }
 
-    public String getSpecies() {
+    public Species getSpecies() {
         return species;
     }
     public String getNickname() {
@@ -63,4 +66,15 @@ public class Pet {
         return String.format("%s {nickname='%s', age=%d, trickLevel=%d, habits=%s}",
                 this.getSpecies(), this.getNickname(), this.getAge(), this.getTrickLevel(), Arrays.toString(this.getHabits()));
     }
+
+    @Override
+    public boolean equals(Object obj){
+        return this == obj;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.getSpecies(), this.getNickname());
+    }
+
 }
